@@ -7,7 +7,7 @@ node * insert(node * root, int value)
     return new node (value);
     
     if (root -> data < value )
-        root -> right = new node (value);
+        root -> right = insert(root -> right, value);
     if(root -> data >= value)
-        root -> left = new node (value) ;
+        root -> left = insert(root -> left , value);
 }
