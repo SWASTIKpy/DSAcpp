@@ -11,3 +11,7 @@ node * insert(node * root, int value)
     if(root -> data >= value)
         root -> left = insert(root -> left , value);
 }
+
+
+// deletion 
+
