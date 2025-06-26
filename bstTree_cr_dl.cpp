@@ -40,7 +40,7 @@ node * deleteNode(node * root, int value)
         }
         
         // node with two children: get the inorder successor (smallest in the right subtree)
-        node * temp = minValueNode(root -> right);
+        node * temp = inorderSuccesor(root);
         
         // copy the inorder successor's content to this node
         root -> data = temp -> data;
@@ -48,4 +48,5 @@ node * deleteNode(node * root, int value)
         // delete the inorder successor
         root -> right = deleteNode(root -> right, temp -> data);
     }
+    return root;
 }
